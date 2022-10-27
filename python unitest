@@ -1,0 +1,27 @@
+"""
+
+This module contains the core framework classes that form the basis of
+specific test cases and suites (TestCase, TestSuite etc.), and also a
+text-based utility class for running the tests and reporting the results
+ (TextTestRunner).
+ 
+Simple usage:
+    import unittest
+    class IntegerArithmeticTestCase(unittest.TestCase):
+        def testAdd(self):  # test method names begin with 'test'
+            self.assertEqual((1 + 2), 3)
+            self.assertEqual(0 + 1, 1)
+        def testMultiply(self):
+            self.assertEqual((0 * 10), 0)
+            self.assertEqual((5 * 8), 40)
+    if __name__ == '__main__':
+        unittest.main()
+
+"""
+
+__all__ = ['TestResult', 'TestCase', 'IsolatedAsyncioTestCase', 'TestSuite',
+           'TextTestRunner', 'TestLoader', 'FunctionTestCase', 'main',
+           'defaultTestLoader', 'SkipTest', 'skip', 'skipIf', 'skipUnless',
+           'expectedFailure', 'TextTestResult', 'installHandler',
+           'registerResult', 'removeResult', 'removeHandler',
+           'addModuleCleanup', 'doModuleCleanups', 'enterModuleContext']
